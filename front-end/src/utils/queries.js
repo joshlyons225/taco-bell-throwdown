@@ -9,12 +9,12 @@ export const QUERY_THOUGHTS = gql`
       thoughtText
       createdAt
       username
-      reactionCount
-      reactions {
+      replyCount
+      replies {
         _id
         createdAt
         username
-        reactionBody
+        replyBody
       }
     }
   }
@@ -27,12 +27,12 @@ export const QUERY_THOUGHT = gql`
       thoughtText
       createdAt
       username
-      reactionCount
-      reactions {
+      replyCount
+      replies {
         _id
         createdAt
         username
-        reactionBody
+        replyBody
       }
     }
   }
@@ -53,7 +53,7 @@ export const QUERY_USER = gql`
         _id
         thoughtText
         createdAt
-        reactionCount
+        replyCount
       }
     }
   }
@@ -70,11 +70,11 @@ export const QUERY_ME = gql`
         _id
         thoughtText
         createdAt
-        reactionCount
-        reactions {
+        replyCount
+        replies {
           _id
           createdAt
-          reactionBody
+          replyBody
           username
         }
       }

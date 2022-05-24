@@ -33,22 +33,22 @@ export const ADD_THOUGHT = gql`
       thoughtText
       createdAt
       username
-      reactionCount
-      reactions {
+      replyCount
+      replies {
         _id
       }
     }
   }
 `;
 
-export const ADD_REACTION = gql`
-  mutation addReaction($thoughtId: ID!, $reactionBody: String!) {
-    addReaction(thoughtId: $thoughtId, reactionBody: $reactionBody) {
+export const ADD_REPLY = gql`
+  mutation addReply($thoughtId: ID!, $replyBody: String!) {
+    addReply(thoughtId: $thoughtId, replyBody: $replyBody) {
       _id
-      reactionCount
-      reactions {
+      replyCount
+      replies {
         _id
-        reactionBody
+        replyBody
         createdAt
         username
       }
