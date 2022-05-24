@@ -3,7 +3,7 @@
 @tailwind utilities;
 @tailwind screens;
 
-@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;300;400;700&family=Londrina+Outline&family=Londrina+Sketch&family=Love+Ya+Like+A+Sister&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;300;400;700&family=Londrina+Outline&family=Londrina+Sketch&family=Londrina+Solid:wght@100;300&display=swap');
 
 @layer base {
   html {
@@ -20,9 +20,9 @@ ul.nav {
 }
 
 li.nav {
-  font-family: 'Londrina Sketch' !important;
-  font-size: xx-large;
-  color: white;
+  font-family: 'Londrina Solid' !important;
+  font-size: x-large;
+  color: rgba(255, 255, 255, 0.5);
   padding: .5rem 1rem;
 }
 
@@ -30,7 +30,7 @@ li.nav:hover {
   /* background-image: linear-gradient(rgba(234, 91, 93, .3), rgba(71, 11, 145, .3)); */
   border-radius: .25em;
   outline-style: solid;
-  color: rgba(255, 255, 255, 1);
+  color: white;
   box-shadow: 0 5px 15px rgba(145, 92, 182, .4);
 }
 
@@ -49,16 +49,16 @@ li.nav:hover {
   }
 
   li.nav2 {
-    font-family: 'Londrina Sketch' !important;
-    font-size: xx-large;
-    color: white;
+    font-family: 'Londrina Solid' !important;
+    font-size: x-large;
+    color: rgba(255, 255, 255, 0.5);
     padding: .5rem 1rem;
     text-align: center;
   }
   
   li.nav2:hover {
     outline-style: solid;
-    color: rgba(255, 255, 255, 1);
+    color: white;
     box-shadow: 0 5px 15px rgba(145, 92, 182, .4);
   }
 }
