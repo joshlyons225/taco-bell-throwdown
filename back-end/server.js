@@ -34,12 +34,15 @@ app.get("/", (req, res) => {
 });
 
 // connect db with mongoose and env
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/taco-bellz", {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-  useCreateIndex: true,
-  useFindAndModify: false,
-});
+mongoose.connect(
+  process.env.MONGODB_URI || "mongodb://localhost/taco-bell-throwdown",
+  {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+    useCreateIndex: true,
+    useFindAndModify: false,
+  }
+);
 
 // set log for executed mongo queries
 mongoose.set("debug", true);
