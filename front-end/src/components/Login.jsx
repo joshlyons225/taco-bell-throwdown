@@ -4,11 +4,11 @@ import { Link } from 'react-scroll';
 import Logo1 from '../assets/images/campeon.png';
 import Logo from '../assets/images/tall-head.png';
 
-const Login2 = () => {
+const Login = () => {
   return (
     <section
-      className='h-full gradient-form bg-gray-200 md:h-screen loginup'
-      id='loginup'
+      className='h-full gradient-form bg-gray-200 md:h-screen login'
+      id='login'
     >
       <div className='container py-12 px-6 h-full'>
         <div className='flex justify-center items-center flex-wrap h-full g-6 text-gray-800'>
@@ -88,4 +88,4 @@ const Login2 = () => {
   );
 };
 
-export default Login2;
+export default Login;
