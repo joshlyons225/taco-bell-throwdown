@@ -1,27 +1,27 @@
-import React from 'react';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
+import React from "react";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import {
   ApolloClient,
   InMemoryCache,
   ApolloProvider,
   createHttpLink,
-} from '@apollo/client';
-import { setContext } from '@apollo/client/link/context';
+} from "@apollo/client";
+import { setContext } from "@apollo/client/link/context";
 
 // import all sections from pages dir here
-import Home from './components/Home';
+import Home from "./components/Home";
 
 const httpLink = createHttpLink({
-  uri: '/graphql',
+  uri: "/graphql",
 });
 
 const authLink = setContext((_, { headers }) => {
-  const token = localStorage.getItem('id_token');
+  const token = localStorage.getItem("id_token");
 
   return {
     headers: {
       ...headers,
-      authorization: token ? `Bearer ${token}` : '',
+      authorization: token ? `Bearer ${token}` : "",
     },
   };
 });
@@ -35,8 +35,9 @@ function App() {
   return (
     <ApolloProvider client={client}>
       <Router>
-        <Route path='/front-end/src/components/Home' element={<Home />} />
-        {/* <Route path="" and element={<  />} here for every section */}
+        <Routes>
+          <Route path="/" element={<Home />} />
+        </Routes>
       </Router>
     </ApolloProvider>
   );
