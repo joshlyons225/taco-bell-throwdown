@@ -1,37 +1,74 @@
-const { Schema, model } = require('mongoose');
-const reactionSchema = require('./Reaction');
-const dateFormat = require('../utils/dateFormat');
+// import utils and dependencies
+const { Schema, model, Types } = require("mongoose");
+const dateFormat = require("../utils/dateFormat");
 
-const thoughtSchema = new Schema(
+// create Reply Schema
+const ReplySchema = new Schema(
   {
-    thoughtText: {
+    // create custom reply id
+    replyId: {
+      type: Schema.Types.ObjectId,
+      default: () => new Types.ObjectId(),
+    },
+    replyBody: {
       type: String,
-      required: 'You need to leave a thought!',
+      required: "Type something- your thoughts are worthy!",
       minlength: 1,
-      maxlength: 280
+      maxlength: 280,
+      trim: true,
+    },
+    username: {
+      type: String,
+      required: "Don't say a word if you're too afraid to leave your name.",
     },
     createdAt: {
       type: Date,
       default: Date.now,
-      get: timestamp => dateFormat(timestamp)
+      get: (timestamp) => dateFormat(timestamp),
     },
-    username: {
-      type: String,
-      required: true
-    },
-    reactions: [reactionSchema]
   },
   {
+    // add getters
     toJSON: {
-      getters: true
-    }
+      getters: true,
+    },
   }
 );
 
-thoughtSchema.virtual('reactionCount').get(function() {
-  return this.reactions.length;
+// create Thought schema
+const thoughtSchema = new Schema(
+  {
+    thoughtText: {
+      type: String,
+      required: "I sure hope this is important.",
+      minlength: 1,
+      maxlength: 280,
+    },
+    createdAt: {
+      type: Date,
+      default: Date.now,
+      get: (timestamp) => dateFormat(timestamp),
+    },
+    username: {
+      type: String,
+      required: "Don't say a word if you're too afraid to leave your name.",
+    },
+    // call Reply Schema
+    replies: [ReplySchema],
+  },
+  {
+    // // add virtuals and getters
+    toJSON: {
+      virtuals: true,
+      getters: true,
+    },
+  }
+);
+
+thoughtSchema.virtual("replyCount").get(function () {
+  return this.replies.length;
 });
 
-const Thought = model('Thought', thoughtSchema);
+const Thought = model("Thought", thoughtSchema);
 
 module.exports = Thought;
