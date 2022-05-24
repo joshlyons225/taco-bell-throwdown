@@ -42,8 +42,13 @@ function App() {
     <ApolloProvider client={client}>
       <Router>
         <Routes>
+          <Route path='/login' element={<Login2 />} />
+          <Route path='/signup' element={<Signup />} />
           <Route path='/navbar' element={<Navbar />} />
           <Route path='/' element={<Home />} />
+          <Route path='/champion' element={<Champion />} />
+          <Route path='/throwdown' element={<Throwdown />} />
+          <Route path='/footer' element={<Footer />} />
         </Routes>
       </Router>
     </ApolloProvider>
