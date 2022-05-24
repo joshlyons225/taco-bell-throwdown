@@ -41,11 +41,6 @@ const Navbar = () => {
               LOG IN
             </Link>
           </li>
-          <li className='nav'>
-            <Link to='signup' smooth={true} duration={500}>
-              SIGN UP
-            </Link>
-          </li>
         </ul>
 
         {/* <div className='hidden md:flex justify-end items-center space-x-3 mr-3'>
@@ -96,11 +91,11 @@ const Navbar = () => {
             {' '}
             <Link
               onClick={clickHandler}
-              to='loginup'
+              to='login'
               smooth={true}
               duration={500}
             >
-              LOG IN/SIGNUP OR LOG OUT
+              LOG IN
             </Link>
           </li>
         </ul>
