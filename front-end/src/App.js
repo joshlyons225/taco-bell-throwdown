@@ -14,7 +14,7 @@ import Navbar from './components/Navbar';
 import Champion from './components/Champion';
 import Throwdown from './components/Throwdown';
 import Signup from './components/Signup';
-import Login2 from './components/Login2';
+import Login from './components/Login';
 import Footer from './components/Footer';
 
 const httpLink = createHttpLink({
@@ -48,7 +48,7 @@ function App() {
           <Throwdown />
           <Footer />
           <Routes>
-            <Route path='/login' element={<Login2 />} />
+            <Route path='/login' element={<Login />} />
             <Route path='/signup' element={<Signup />} />
           </Routes>
         </div>

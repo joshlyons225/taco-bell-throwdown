@@ -35,10 +35,15 @@ const Navbar = () => {
         </div>
 
         {/* Login / Signup */}
-        <ul className='hidden md:flex justify-end items-center space-x-3 mr-3'>
+        <ul className='hidden md:flex justify-end items-center space-x-3 mr-3 divide-x'>
           <li className='nav'>
-            <Link to='loginup' smooth={true} duration={500}>
-              LOG IN | SIGN UP
+            <Link to='login' smooth={true} duration={500}>
+              LOG IN
+            </Link>
+          </li>
+          <li className='nav'>
+            <Link to='signup' smooth={true} duration={500}>
+              SIGN UP
             </Link>
           </li>
         </ul>
