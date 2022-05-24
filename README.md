@@ -15,8 +15,8 @@
 
 
 ## Description
-As a Taco Bell enthusiast I want a safe space to connect with like minded individuals to vote for Taco Bell favorites and share my creations so that I know am ordering Taco Bell's best items while learning new ways to customize favorites.  
-This application lets users create an account to be able to upvote on their favorite menu item and see which item is currently the most popular. In future developments (coming VERY soon), the user will also be able to customize the existing menu items and allow that customizaiton to be upvoted by other users as well. 
+As a Taco Bell enthusiast I want a safe space to connect with like minded individuals to vote for Taco Bell favorites and see which menu item is crowned champion so that I know am ordering Taco Bell's best items.  
+This application lets users create an account profile to be able to upvote on their favorite menu item and see which item is currently the most popular. Users can interact by comments and friending each other. In future developments (coming VERY soon), the user will also be able to customize the existing menu items and allow that customizaiton to be upvoted by other users as well. 
 
 *Please note that this application is in no way sponsored, endorsed or administered by, or associated with, Taco Bell. We are just a group of individuals who thoroughly enjoy their food.*
 
