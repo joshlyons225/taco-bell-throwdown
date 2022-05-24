@@ -7,6 +7,7 @@ const CommentWall = ({ thoughts, title }) => {
     return <p>Your wall is empty, just like your social life.</p>;
   }
 
+  // pretty pretty styling
   return (
     <div>
       <h3>{title}</h3>
