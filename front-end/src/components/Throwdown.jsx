@@ -14,7 +14,7 @@ const Throwdown = () => {
         className='mx-auto w-1/2 py-3'
       ></img>
       {/* Carousel */}
-      <div className='carousel-wrapper pb-8'>
+      <div className='carousel-wrapper pb-10'>
         <Carousel
           infiniteLoop
           useKeyboardArrows
@@ -45,7 +45,7 @@ const Throwdown = () => {
                   </button>
                 </div>
 
-                <p className='text-white text-lg pb-12 pt-3 absolute bottom-10 inset-x-1'>
+                <p className='text-white text-lg pb-12 pt-3 absolute bottom-10 inset-x-1 caroutext'>
                   If there’s anything more carefree than the classic Chalupa, we
                   aren’t familiar with it. Some say that they invented the term
                   “chill”. Heck, you can’t even say ‘Chalupa’ without a little
@@ -77,7 +77,7 @@ const Throwdown = () => {
                   </button>
                 </div>
 
-                <p className='text-white text-lg pb-12 pt-3 absolute bottom-10 inset-x-1'>
+                <p className='text-white text-lg pb-12 pt-3 absolute bottom-10 inset-x-1 caroutext'>
                   A little while ago, in the not-so-distant past, someone in our
                   kitchen had an epiphany: we should take a quesadilla, roll it
                   up like a burrito, and fill it with delicious ingredients. And
@@ -110,7 +110,7 @@ const Throwdown = () => {
                   </button>
                 </div>
 
-                <p className='text-white text-lg pb-12 pt-3 absolute bottom-10 inset-x-1'>
+                <p className='text-white text-lg pb-12 pt-3 absolute bottom-10 inset-x-1 caroutext'>
                   So there’s cheesy, and then there’s cheesy. How do you
                   differentiate the two? Because both clearly have totally
                   different meanings. For starters, you can be cheesy by telling
@@ -145,7 +145,7 @@ const Throwdown = () => {
                   </button>
                 </div>
 
-                <p className='text-white text-lg pb-12 pt-3 absolute bottom-10 inset-x-1'>
+                <p className='text-white text-lg pb-12 pt-3 absolute bottom-10 inset-x-1 caroutext'>
                   A warm flatbread layered with three-cheese blend and wrapped
                   around a crunchy taco filled with seasoned beef, spicy ranch
                   sauce, crispy lettuce and shredded cheddar cheese.
@@ -172,7 +172,7 @@ const Throwdown = () => {
                   </button>
                 </div>
 
-                <h6 className='text-white text-lg pb-12 pt-3 absolute bottom-10 inset-x-1'>
+                <p className='text-white text-lg pb-12 pt-3 absolute bottom-10 inset-x-1 caroutext'>
                   The Chalupa Supreme sure weaves some beautiful witchcraft.
                   Take a traditional flatbread, something already awesome in its
                   own right, and fry it. Suddenly you have a shell that
@@ -182,7 +182,7 @@ const Throwdown = () => {
                   anomaly. The only greater fried magic trick known to man is
                   turning arbitrary dough splashes, into funnel cake. Now that
                   is nothing short of a miracle.
-                </h6>
+                </p>
               </div>
             </div>
           </div>
@@ -205,7 +205,7 @@ const Throwdown = () => {
                   </button>
                 </div>
 
-                <p className='text-white text-lg pb-12 pt-3 absolute bottom-10 inset-x-1'>
+                <p className='text-white text-lg pb-12 pt-3 absolute bottom-10 inset-x-1 caroutext'>
                   Seasoned beef and refried beans between two Mexican Pizza
                   shells with Mexican Pizza sauce, three-cheese blend, and
                   tomatoes on top.
@@ -223,7 +223,7 @@ const Throwdown = () => {
                   alt='doritoslocos icon'
                 ></img>
                 <h6 className='text-7xl absolute top-20 mx-auto nav pl-50'>
-                  NACHO CHEESE DORITOS LOCOS TACO SUPREME
+                  DORITOS LOCOS TACO SUPREME
                 </h6>
 
                 <div className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2'>
@@ -232,7 +232,7 @@ const Throwdown = () => {
                   </button>
                 </div>
 
-                <p className='text-white text-lg pb-12 pt-3 absolute bottom-10 inset-x-1'>
+                <p className='text-white text-lg pb-12 pt-3 absolute bottom-10 inset-x-1 caroutext'>
                   As you already know, the Nacho Cheese Doritos® Locos Tacos
                   Supreme® all started with a dream. But with every dream,
                   there’s always that starting point. You know, the leap off.
@@ -263,7 +263,7 @@ const Throwdown = () => {
                   </button>
                 </div>
 
-                <p className='text-white text-lg pb-12 pt-3 absolute bottom-10 inset-x-1'>
+                <p className='text-white text-lg pb-12 pt-3 absolute bottom-10 inset-x-1 caroutext'>
                   Welcome to the Nachos Draft: the daily lunch event that you've
                   prepped for all off-season...aka since your last Taco Bell
                   run. The #1 overall pick is an easy choice: the Nachos
@@ -293,7 +293,7 @@ const Throwdown = () => {
                   </button>
                 </div>
 
-                <p className='text-white text-lg pb-12 pt-3 absolute bottom-10 inset-x-1'>
+                <p className='text-white text-lg pb-12 pt-3 absolute bottom-10 inset-x-1 caroutext'>
                   The Chicken Quesadilla is a purist’s meal; and we say “purist”
                   in the most complimenting way possible. It’s a simple flour
                   tortilla with some grilled chicken, a hefty portion of melted
@@ -329,7 +329,7 @@ const Throwdown = () => {
                   </button>
                 </div>
 
-                <p className='text-white text-lg pb-12 pt-3 absolute bottom-10 inset-x-1'>
+                <p className='text-white text-lg pb-12 pt-3 absolute bottom-10 inset-x-1 caroutext'>
                   While the Crunchy Taco’s got a tough outer shell, a bit of a
                   mean streak, and a penchant for picking fights with strangers,
                   the Soft Taco has a nice polite chill. Instead of a tough corn
@@ -361,7 +361,7 @@ const Throwdown = () => {
                   </button>
                 </div>
 
-                <p className='text-white text-lg pb-12 pt-3 absolute bottom-10 inset-x-1'>
+                <p className='text-white text-lg pb-12 pt-3 absolute bottom-10 inset-x-1 caroutext'>
                   Who even thought of the game hot potato? Seriously, though.
                   It’s basically a game of catch but with a hot potato. If you
                   think about it, you basically heat a potato hotter than you
@@ -397,7 +397,7 @@ const Throwdown = () => {
                   </button>
                 </div>
 
-                <p className='text-white text-lg pb-12 pt-3 absolute bottom-10 inset-x-1'>
+                <p className='text-white text-lg pb-12 pt-3 absolute bottom-10 inset-x-1 caroutext'>
                   The Black Bean Crunchwrap is the vegetarian version of one of
                   our greatest creations. So what’s in one, exactly? We couldn’t
                   be happier that you asked. It starts off with our signature
@@ -430,7 +430,7 @@ const Throwdown = () => {
                   </button>
                 </div>
 
-                <p className='text-white text-lg pb-12 pt-3 absolute bottom-10 inset-x-1'>
+                <p className='text-white text-lg pb-12 pt-3 absolute bottom-10 inset-x-1 caroutext'>
                   Seasoned Nacho Fries topped with black beans, spicy white hot
                   ranch sauce, nacho cheese sauce, tomatoes, reduced-fat sour
                   cream, and real shredded cheddar cheese wrapped inside a warm

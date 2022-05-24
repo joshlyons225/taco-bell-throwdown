@@ -109,6 +109,27 @@ h3 {
   height: 30rem;
 }
 
+
+  /* @media only screen and (max-width: 768px) { 
+    h6.caroutext {
+    display: none;
+    opacity: 0%;
+    }
+  }
+
+  @media only screen and (max-width: 768px) { 
+    div.caroutext {
+    top: 20px
+    }
+  } */
+
+  @media only screen and (max-width: 768px) { 
+    p.caroutext {
+    display: none;
+    opacity: 0%;
+    }
+  }
+
 p.text-6xl {
   font-family: 'Londrina Sketch';
   font-weight: bold;
