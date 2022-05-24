@@ -103,6 +103,13 @@ const Login = () => {
                           Forgot Password?
                         </a>
                       </div>
+                      {/* set error popup for incorrect credentials */}
+                      {error && (
+                        <div>
+                          Login failed, Bot. Try username and/or password again.
+                          Beep, boop.
+                        </div>
+                      )}
                       <div className="flex items-center justify-between pb-6">
                         <p className="mb-0 mr-2 text-gray-500">
                           Need An Account?
@@ -119,12 +126,6 @@ const Login = () => {
                         </Link>
                       </div>
                     </form>
-                    {/* set error popup for incorrect credentials */}
-                    {error && (
-                      <div>
-                        Login failed, Bot. Try username and/or password again.
-                      </div>
-                    )}
                   </div>
                 </div>
 
