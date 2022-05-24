@@ -1,5 +1,19 @@
 {
-  "dependencies": {
-    "nodemon": "^2.0.16"
+  "name": "taco-bell-throwdown",
+  "version": "1.0.0",
+  "description": "",
+  "main": "back-end/server.js",
+  "scripts": {
+    "start": "node back-end/server.js",
+    "develop": "concurrently \"cd back-end && npm run watch\" \"cd front-end && npm start\"",
+    "install": "cd back-end && npm i && cd ../front-end && npm i",
+    "seed": "cd back-end && npm run seed",
+    "build": "cd front-end && npm run build"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^5.1.0"
   }
 }
