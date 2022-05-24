@@ -35,7 +35,7 @@ function App() {
   return (
     <ApolloProvider client={client}>
       <Router>
-        <Route path='/home' component={Home} />
+        <Route path='/front-end/src/components/Home' element={<Home />} />
         {/* <Route path="" and element={<  />} here for every section */}
       </Router>
     </ApolloProvider>
