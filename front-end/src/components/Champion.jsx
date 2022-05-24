@@ -13,7 +13,7 @@ const Champion = () => {
           <h1 className='text-rose-300 text-7xl py-4 font-bold sm:text-center md:text-left text-'>
             WEEKLY CHAMPION
           </h1>
-          <p className='text-rose-300 sm:text-center md:text-left'>
+          <p className='text-rose-300 sm:text-center md:text-left '>
             In life, there are winners, and there are losers. Here we present
             the cherished Taco Bell menu item that rules them all (if you spent
             all day mashing the UPVOTE button, good for you. We appreciate that
