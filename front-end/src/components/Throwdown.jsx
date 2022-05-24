@@ -100,9 +100,9 @@ const Throwdown = () => {
                   alt='cbrburrito icon'
                 ></img>
 
-                <p className='text-5xl text-white font-bold absolute top-20 inset-x-1'>
+                <h6 className='text-7xl absolute top-20 mx-auto nav pl-50'>
                   CHEESY BEAN & RICE BURRITO
-                </p>
+                </h6>
 
                 <div className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2'>
                   <button className='outline  text-white rounded-lg py-1 px-3  hover:bg-rose-400 hover:outline-none'>
@@ -135,9 +135,9 @@ const Throwdown = () => {
                   src={imgPack['smImgPack']['GorditaCrunch']}
                   alt='gorditacrunch icon'
                 ></img>
-                <p className='text-5xl text-white font-bold absolute top-20 inset-x-1'>
+                <h6 className='text-7xl absolute top-20 mx-auto nav pl-50'>
                   CHEESY GORDITA CRUNCH
-                </p>
+                </h6>
 
                 <div className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2'>
                   <button className='outline  text-white rounded-lg py-1 px-3  hover:bg-rose-400 hover:outline-none'>
@@ -162,9 +162,9 @@ const Throwdown = () => {
                   src={imgPack['smImgPack']['ChikChalupa']}
                   alt='chikchalupa icon'
                 ></img>
-                <p className='text-5xl text-white font-bold absolute top-20 inset-x-1'>
+                <h6 className='text-7xl absolute top-20 mx-auto nav pl-50'>
                   CHICKEN CHALUPA SUPREME
-                </p>
+                </h6>
 
                 <div className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2'>
                   <button className='outline  text-white rounded-lg py-1 px-3  hover:bg-rose-400 hover:outline-none'>
@@ -172,7 +172,7 @@ const Throwdown = () => {
                   </button>
                 </div>
 
-                <p className='text-white text-lg pb-12 pt-3 absolute bottom-10 inset-x-1'>
+                <h6 className='text-white text-lg pb-12 pt-3 absolute bottom-10 inset-x-1'>
                   The Chalupa Supreme sure weaves some beautiful witchcraft.
                   Take a traditional flatbread, something already awesome in its
                   own right, and fry it. Suddenly you have a shell that
@@ -182,7 +182,7 @@ const Throwdown = () => {
                   anomaly. The only greater fried magic trick known to man is
                   turning arbitrary dough splashes, into funnel cake. Now that
                   is nothing short of a miracle.
-                </p>
+                </h6>
               </div>
             </div>
           </div>
@@ -195,9 +195,9 @@ const Throwdown = () => {
                   src={imgPack['smImgPack']['MexPizza']}
                   alt='mexpizza icon'
                 ></img>
-                <p className='text-5xl text-white font-bold absolute top-20 inset-x-1'>
+                <h6 className='text-7xl absolute top-20 mx-auto nav pl-50'>
                   MEXICAN PIZZA
-                </p>
+                </h6>
 
                 <div className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2'>
                   <button className='outline  text-white rounded-lg py-1 px-3  hover:bg-rose-400 hover:outline-none'>
@@ -222,9 +222,9 @@ const Throwdown = () => {
                   src={imgPack['smImgPack']['DoritosLocos']}
                   alt='doritoslocos icon'
                 ></img>
-                <p className='text-5xl text-white font-bold absolute top-20 inset-x-1'>
-                  NACHO CHEESE DORITOS® LOCOS TACO SUPREME®
-                </p>
+                <h6 className='text-7xl absolute top-20 mx-auto nav pl-50'>
+                  NACHO CHEESE DORITOS LOCOS TACO SUPREME
+                </h6>
 
                 <div className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2'>
                   <button className='outline  text-white rounded-lg py-1 px-3  hover:bg-rose-400 hover:outline-none'>
@@ -253,9 +253,9 @@ const Throwdown = () => {
                   src={imgPack['smImgPack']['BellGrande']}
                   alt='bellgrande icon'
                 ></img>
-                <p className='text-5xl text-white font-bold absolute top-20 inset-x-1'>
-                  NACHOS BELLGRANDE®
-                </p>
+                <h6 className='text-7xl absolute top-20 mx-auto nav pl-50'>
+                  NACHOS BELLGRANDE
+                </h6>
 
                 <div className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2'>
                   <button className='outline  text-white rounded-lg py-1 px-3  hover:bg-rose-400 hover:outline-none'>
@@ -283,9 +283,9 @@ const Throwdown = () => {
                   src={imgPack['smImgPack']['ChikQuesadilla']}
                   alt='chikquesadilla icon'
                 ></img>
-                <p className='text-5xl text-white font-bold absolute top-20 inset-x-1'>
+                <h6 className='text-7xl absolute top-20 mx-auto nav pl-50'>
                   CHICKEN QUESADILLA
-                </p>
+                </h6>
 
                 <div className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2'>
                   <button className='outline  text-white rounded-lg py-1 px-3  hover:bg-rose-400 hover:outline-none'>
@@ -319,9 +319,9 @@ const Throwdown = () => {
                   src={imgPack['smImgPack']['SoftTaco']}
                   alt='softtaco icon'
                 ></img>
-                <p className='text-5xl text-white font-bold absolute top-20 inset-x-1'>
+                <h6 className='text-7xl absolute top-20 mx-auto nav pl-50'>
                   CLASSIC BEEF SOFT TACO
-                </p>
+                </h6>
 
                 <div className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2'>
                   <button className='outline  text-white rounded-lg py-1 px-3  hover:bg-rose-400 hover:outline-none'>
@@ -351,9 +351,9 @@ const Throwdown = () => {
                   src={imgPack['smImgPack']['PotTaco']}
                   alt='pottaco icon'
                 ></img>
-                <p className='text-5xl text-white font-bold absolute top-20 inset-x-1'>
+                <h6 className='text-7xl absolute top-20 mx-auto nav pl-50'>
                   SPICY POTATO SOFT TACO
-                </p>
+                </h6>
 
                 <div className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2'>
                   <button className='outline  text-white rounded-lg py-1 px-3  hover:bg-rose-400 hover:outline-none'>
@@ -387,9 +387,9 @@ const Throwdown = () => {
                   src={imgPack['smImgPack']['VegCrunchWrap']}
                   alt='vegcrunchwrap icon'
                 ></img>
-                <p className='text-5xl text-white font-bold absolute top-20 inset-x-1'>
+                <h6 className='text-7xl absolute top-20 mx-auto nav pl-50'>
                   BLACK BEAN CRUNCHWRAP
-                </p>
+                </h6>
 
                 <div className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2'>
                   <button className='outline  text-white rounded-lg py-1 px-3  hover:bg-rose-400 hover:outline-none'>
@@ -420,9 +420,9 @@ const Throwdown = () => {
                   src={imgPack['smImgPack']['RanchFryBurr']}
                   alt='ranchfryburr icon'
                 ></img>
-                <p className='text-5xl text-white font-bold absolute top-20 inset-x-1'>
+                <h6 className='text-7xl absolute top-20 mx-auto nav pl-50'>
                   WHITE HOT RANCH FRIES BURRITO
-                </p>
+                </h6>
 
                 <div className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2'>
                   <button className='outline  text-white rounded-lg py-1 px-3  hover:bg-rose-400 hover:outline-none'>
