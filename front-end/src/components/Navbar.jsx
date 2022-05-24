@@ -52,6 +52,7 @@ const Navbar = () => {
           <button className='nav'>LOG IN</button>
           <button className='nav'>SIGN UP</button>
         </div> */}
+
         {/* Nav burger */}
         <div onClick={clickHandler} className='md:invisible z-10'>
           {!nav ? <FaBars /> : <FaTimes />}
@@ -59,17 +60,17 @@ const Navbar = () => {
         <ul
           className={
             !nav
-              ? 'absolute top-0 w-full h-full flex flex-col inset-x-0 justify-content-center divide-y nav2'
-              : 'invisible'
+              ? 'invisible'
+              : 'absolute top-0 w-full h-full flex flex-col inset-x-0 justify-content-center nav divide-y mt-2'
           }
         >
-          <li className='py-2 text-xl text-center'>
+          <li className='py-2 text-xl text-center nav2'>
             {' '}
             <Link onClick={clickHandler} to='home' smooth={true} duration={500}>
               HOME
             </Link>
           </li>
-          <li className='py-2 text-xl text-center'>
+          <li className='py-2 text-xl text-center nav2'>
             {' '}
             <Link
               onClick={clickHandler}
@@ -80,7 +81,7 @@ const Navbar = () => {
               CHAMP
             </Link>
           </li>
-          <li className='py-2 text-xl text-center'>
+          <li className='py-2 text-xl text-center nav2'>
             {' '}
             <Link
               onClick={clickHandler}
