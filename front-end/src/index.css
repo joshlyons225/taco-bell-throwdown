@@ -101,8 +101,29 @@ h3 {
 
 .champ {
   font-family: 'Londrina Sketch' !important;
-  font-weight: bold;
   position: absolute;
+}
+
+.champbg {
+  background: url('./assets/images/large/black_bean_chalupa_1025x480.png');
+  height: 30rem;
+  opacity: 75%;
+}
+
+p.text-6xl {
+  font-family: 'Londrina Sketch';
+  font-weight: bold;
+  text-align: left;
+}
+
+p.champtext {
+  text-align: left;
+}
+
+.tally {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 h1,
