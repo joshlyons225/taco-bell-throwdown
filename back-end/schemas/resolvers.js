@@ -1,7 +1,7 @@
 // import required files
 const { signToken } = require("../utils/auth");
 const { AuthenticationError } = require("apollo-server-express");
-const { User, Thought } = require("../models");
+const { User, Thought, Menu } = require("../models");
 
 const resolvers = {
   // Query function list
@@ -50,6 +50,7 @@ const resolvers = {
     login: async (parent, { email, password }) => {
       const user = await User.findOne({ email });
 
+      // check username and password
       if (!user) {
         throw new AuthenticationError("Someone forgot their username...");
       }
@@ -88,14 +89,14 @@ const resolvers = {
       );
     },
 
-    // Reaction function controllers
-    addReaction: async (parent, { thoughtId, reactionBody }, context) => {
+    // Reply function controllers
+    addReply: async (parent, { thoughtId, replyBody }, context) => {
       if (context.user) {
         const updatedThought = await Thought.findOneAndUpdate(
           { _id: thoughtId },
           {
             $push: {
-              reactions: { reactionBody, username: context.user.username },
+              replies: { replyBody, username: context.user.username },
             },
           },
           { new: true, runValidators: true }
