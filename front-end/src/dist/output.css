@@ -1116,6 +1116,10 @@ li {
   color: rgb(0 0 0 / var(--tw-text-opacity));
 }
 
+.opacity-100 {
+  opacity: 1;
+}
+
 .shadow-lg {
   --tw-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
   --tw-shadow-colored: 0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);
@@ -1396,6 +1400,28 @@ h3 {
   font-family: 'Londrina Sketch' !important;
   font-weight: bold;
   position: absolute;
+}
+
+.champbg {
+  background-image: url('./assets/images/large/black_bean_chalupa_1025x480.jpg');
+  height: 30rem;
+  opacity: 0.55;
+}
+
+.champbg::before {
+  opacity:1;
+}
+
+p.text-6xl {
+  font-family: 'Londrina Sketch';
+  font-weight: bold;
+  text-align: right;
+  opacity: 1 !important;
+}
+
+p.champtext {
+  text-align: right;
+  opacity: 1;
 }
 
 h1,
