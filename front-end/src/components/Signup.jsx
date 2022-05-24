@@ -83,6 +83,13 @@ const Signup = () => {
                 Create Account
               </button>
             </form>
+            {/* set error popup for incorrect credentials */}
+            {error && (
+              <div>
+                Login failed, Bot. Try username and/or password again. Beep,
+                boop.
+              </div>
+            )}
           </div>
 
           <div className="text-grey-dark mt-6">
