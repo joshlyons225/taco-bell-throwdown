@@ -43,14 +43,13 @@ function App() {
       <Router>
         <div className='main'>
           <Navbar />
+          <Home />
+          <Champion />
+          <Throwdown />
+          <Footer />
           <Routes>
             <Route path='/login' element={<Login2 />} />
             <Route path='/signup' element={<Signup />} />
-            <Route path='/navbar' element={<Navbar />} />
-            <Route path='/welcome' element={<Home />} />
-            <Route path='/champion' element={<Champion />} />
-            <Route path='/throwdown' element={<Throwdown />} />
-            <Route path='/footer' element={<Footer />} />
           </Routes>
         </div>
       </Router>
