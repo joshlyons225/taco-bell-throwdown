@@ -2,6 +2,7 @@
 ![License](https://img.shields.io/badge/License-GNU-brightgreen)
 
 ## TABLE OF CONTENTS
+* [User Story](#USERSTORY)
 * [Description](#DESCRIPTION)
 * [GitHub Site](#GITHUB)
 * [Link to Deployed Application](#LINK)
@@ -14,8 +15,12 @@
 * [License](#LICENSE)
 
 
+## User Story
+AS A Taco Bell enthusiast
+I WANT a safe space to connect with like minded individuals to vote for Taco Bell favorites and share my thoughts with friends
+SO THAT I know I am ordering their best items and where to go for suggestions on my next visit
+
 ## Description
-As a Taco Bell enthusiast I want a safe space to connect with like minded individuals to vote for Taco Bell favorites and see which menu item is crowned champion so that I know am ordering Taco Bell's best items.  
 This application lets users create an account profile to be able to upvote on their favorite menu item and see which item is currently the most popular. Users can interact by comments and friending each other. In future developments (coming VERY soon), the user will also be able to customize the existing menu items and allow that customizaiton to be upvoted by other users as well. 
 
 *Please note that this application is in no way sponsored, endorsed or administered by, or associated with, Taco Bell. We are just a group of individuals who thoroughly enjoy their food.*
@@ -27,15 +32,17 @@ https://github.com/joshlyons225/taco-bell-throwdown
 Heroku 
 
 ## Screenshots
-![Screen Shot 2022-05-24 at 7 51 58 PM](https://user-images.githubusercontent.com/93275108/170156687-90726b3e-1c2d-473d-ab37-29c042d9f76c.png)
-![Screen Shot 2022-05-24 at 7 52 14 PM](https://user-images.githubusercontent.com/93275108/170156692-c41d6edd-4d2c-41fb-b6a6-6a0de50ada36.png)
-![Screen Shot 2022-05-24 at 8 06 25 PM](https://user-images.githubusercontent.com/93275108/170157035-487a24c0-a593-4587-aade-c18bb147e891.png)
-![Screen Shot 2022-05-24 at 8 06 37 PM](https://user-images.githubusercontent.com/93275108/170157054-7f228783-b374-4918-8f06-68fa7750e993.png)
+![image](https://user-images.githubusercontent.com/95149604/170357867-8630cd12-cae6-44cd-b62d-d282f132df13.png)
+![image](https://user-images.githubusercontent.com/95149604/170357948-45b1f1be-209b-476b-a617-b559edaed6aa.png)
+![image](https://user-images.githubusercontent.com/95149604/170358097-2092dcf3-5460-4b8a-a9f4-7f5eaf475c39.png)
+![image](https://user-images.githubusercontent.com/95149604/170358424-9887d5e3-cfd7-4dd9-9aae-1a3be7261c14.png)
 
 ## Installation
 1) Clone the repo  
-2) Run npm install  
-3) Run npm start
+2) Open in VS code
+3) Right click on the BACK-end folder, open an integrated terminal & run npm install. Then, kill the terminal.
+4) Right click on the FRONT-end folder, open an integrated terminal & run npm install. Then, kill the terminal.
+5) Open an integrated terminal in the root & run npm install. Then, type npm run develop. 
 
 ## Technologies
 This application was created using:  
@@ -45,7 +52,8 @@ This application was created using:
 * React  
 * Node  
 * Graph QL  
-* JWT  
+* JWT
+* Bcrypt
 * Heroku  
 * Tailwind CSS framework  
 
