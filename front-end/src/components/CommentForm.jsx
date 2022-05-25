@@ -1,7 +1,7 @@
 // import dependencies
 import React, { useState } from "react";
 import { useMutation } from "@apollo/client";
-import { ADD_THOUGHT } from "../utils/mutations";
+import { ADD_THOUGHT, DELETE_THOUGHT } from "../utils/mutations";
 import { QUERY_THOUGHTS, QUERY_ME } from "../utils/queries";
 
 // functionality
@@ -17,6 +17,28 @@ const CommentForm = () => {
         cache.writeQuery({
           query: QUERY_ME,
           data: { me: { ...me, thoughts: [...me.thoughts, addThought] } },
+        });
+      } catch (e) {
+        console.warn("Congrats on having something to say!");
+      }
+
+      // update thought array's cache
+      const { thoughts } = cache.readQuery({ query: QUERY_THOUGHTS });
+      cache.writeQuery({
+        query: QUERY_THOUGHTS,
+        data: { thoughts: [addThought, ...thoughts] },
+      });
+    },
+  });
+
+  const [deleteThought, { error1 }] = useMutation(DELETE_THOUGHT, {
+    update(cache, { data: { deleteThought } }) {
+      try {
+        // update me array's cache
+        const { me } = cache.readQuery({ query: QUERY_ME });
+        cache.writeQuery({
+          query: QUERY_ME,
+          data: { me: { ...me, thoughts: [...me.thoughts, deleteThought] } },
         });
       } catch (e) {
         console.warn("Congrats on having something to say!");
@@ -56,6 +78,23 @@ const CommentForm = () => {
     }
   };
 
+  // delete button function
+  const handleDelete = async (event) => {
+    event.preventDefault();
+
+    try {
+      await deleteThought({
+        variables: { thoughtText },
+      });
+
+      // delete form inputs
+      setText("");
+      setCharacterCount(0);
+    } catch (e) {
+      console.error(e);
+    }
+  };
+
   // pretty pretty styling
   return (
     <div>
@@ -74,11 +113,20 @@ const CommentForm = () => {
           className="form-input col-12 col-md-9 dome"
           onChange={handleChange}
         ></textarea>
+
         <button
           className="btn col-12 col-md-4 px-3 py-2 align-middle dome"
           type="submit"
         >
           Submit
+        </button>
+
+        <button
+          className="btn col-12 col-md-4 px-3 py-2 align-middle dome"
+          type="submit"
+          onClick={handleDelete}
+        >
+          Delete
         </button>
       </form>
     </div>
