@@ -7,8 +7,6 @@ import { ADD_FRIEND } from '../utils/mutations';
 import Auth from '../utils/auth';
 import CommentWall from './CommentWall';
 import CommentForm from './CommentForm';
-import { Link } from 'react-scroll';
-import Login from './Login';
 
 // functionality code
 const Profile = (props) => {
@@ -39,12 +37,14 @@ const Profile = (props) => {
         <h2 className='bg-dark text-secondary pt-4 display-inline-block text-6xl text-center'>
           Welcome to {userParam ? `${user.username}'s` : 'your'} Thunderdome.
         </h2>
-        <Link to={<Login />}>
-          <p className='text-center py-10'>
-            Nah, we're kidding. Sign in, or no happy fun joy time for you. This
-            app is for winners.
-          </p>
-        </Link>
+
+        <p className='text-center py-10'>
+          Nah, we're kidding.{' '}
+          <a href='/login'>
+            <span className='text-2xl hover:text-rose-500 '>SIGN IN</span>
+          </a>
+          , or no happy fun joy time for you. This app is for winners.
+        </p>
       </div>
     );
   }
