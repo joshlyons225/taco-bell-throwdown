@@ -9,18 +9,80 @@ import { useMutation, useQuery } from "@apollo/client";
 import { QUERY_COUNT } from "../utils/queries";
 
 const Throwdown = () => {
-  const { loading1, BBChalupaData } = useQuery(QUERY_COUNT, {
+  // upvote individual food items counter
+  const { loading: loading1, data: BBChalupaData } = useQuery(QUERY_COUNT, {
     variables: {
       food: "BBChalupa",
     },
   });
-  const { loading2, BBQuesaritoData } = useQuery(QUERY_COUNT, {
+  const { loading: loading2, data: BBQuesaritoData } = useQuery(QUERY_COUNT, {
     variables: {
       food: "BBQuesarito",
     },
   });
-  console.log(BBChalupaData);
-  console.log(BBQuesaritoData);
+  const { loading: loading3, data: CBRBurritoData } = useQuery(QUERY_COUNT, {
+    variables: {
+      food: "CBRBurrito",
+    },
+  });
+  const { loading: loading4, data: GorditaCrunchData } = useQuery(QUERY_COUNT, {
+    variables: {
+      food: "GorditaCrunch",
+    },
+  });
+  const { loading: loading5, data: ChikChalupaData } = useQuery(QUERY_COUNT, {
+    variables: {
+      food: "ChikChalupa",
+    },
+  });
+  const { loading: loading6, data: MexPizzaData } = useQuery(QUERY_COUNT, {
+    variables: {
+      food: "MexPizza",
+    },
+  });
+  const { loading: loading7, data: DoritosLocosData } = useQuery(QUERY_COUNT, {
+    variables: {
+      food: "DoritosLocos",
+    },
+  });
+  const { loading: loading8, data: BellGrandeData } = useQuery(QUERY_COUNT, {
+    variables: {
+      food: "BellGrande",
+    },
+  });
+  const { loading: loading9, data: ChikQuesadillaData } = useQuery(
+    QUERY_COUNT,
+    {
+      variables: {
+        food: "ChikQuesadilla",
+      },
+    }
+  );
+  const { loading: loading10, data: SoftTacoData } = useQuery(QUERY_COUNT, {
+    variables: {
+      food: "SoftTaco",
+    },
+  });
+  const { loading: loading11, data: PotTacoData } = useQuery(QUERY_COUNT, {
+    variables: {
+      food: "PotTaco",
+    },
+  });
+  const { loading: loading12, data: VegCrunchWrapData } = useQuery(
+    QUERY_COUNT,
+    {
+      variables: {
+        food: "VegCrunchWrap",
+      },
+    }
+  );
+  const { loading: loading13, data: RanchFryBurrData } = useQuery(QUERY_COUNT, {
+    variables: {
+      food: "RanchFryBurr",
+    },
+  });
+
+  // upvoteFood function
   const [upvoteFood, { error }] = useMutation(UPVOTE_FOOD);
   const upvoteHandler = async (food) => {
     const { data } = await upvoteFood({
@@ -28,6 +90,8 @@ const Throwdown = () => {
     });
     console.log(data);
   };
+
+  // pretty pretty styling
   return (
     <section name="throwdown" className="w-full h-auto bg-black">
       <img
@@ -68,7 +132,8 @@ const Throwdown = () => {
                     }}
                     className="outline  text-white rounded-lg py-1 px-3  hover:bg-rose-400 hover:outline-none"
                   >
-                    UPVOTE | {FaArrowUp} 0
+                    UPVOTE | {FaArrowUp}
+                    {BBChalupaData?.voteCount ? BBChalupaData.voteCount : 0}
                   </button>
                 </div>
 
@@ -105,7 +170,8 @@ const Throwdown = () => {
                     }}
                     className="outline  text-white rounded-lg py-1 px-3  hover:bg-rose-400 hover:outline-none"
                   >
-                    UPVOTE | {FaArrowUp} 0
+                    UPVOTE | {FaArrowUp}
+                    {BBQuesaritoData?.voteCount ? BBQuesaritoData.voteCount : 0}
                   </button>
                 </div>
 
@@ -137,8 +203,14 @@ const Throwdown = () => {
                 </h6>
 
                 <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-                  <button className="outline  text-white rounded-lg py-1 px-3  hover:bg-rose-400 hover:outline-none">
-                    UPVOTE | {FaArrowUp} 808
+                  <button
+                    onClick={() => {
+                      upvoteHandler("CBRBurrito");
+                    }}
+                    className="outline  text-white rounded-lg py-1 px-3  hover:bg-rose-400 hover:outline-none"
+                  >
+                    UPVOTE | {FaArrowUp}
+                    {CBRBurritoData?.voteCount ? CBRBurritoData.voteCount : 0}
                   </button>
                 </div>
 
@@ -172,8 +244,16 @@ const Throwdown = () => {
                 </h6>
 
                 <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-                  <button className="outline  text-white rounded-lg py-1 px-3  hover:bg-rose-400 hover:outline-none">
-                    UPVOTE | {FaArrowUp} 465
+                  <button
+                    onClick={() => {
+                      upvoteHandler("GorditaCrunch");
+                    }}
+                    className="outline  text-white rounded-lg py-1 px-3  hover:bg-rose-400 hover:outline-none"
+                  >
+                    UPVOTE | {FaArrowUp}
+                    {GorditaCrunchData?.voteCount
+                      ? GorditaCrunchData.voteCount
+                      : 0}
                   </button>
                 </div>
 
@@ -199,8 +279,14 @@ const Throwdown = () => {
                 </h6>
 
                 <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-                  <button className="outline  text-white rounded-lg py-1 px-3  hover:bg-rose-400 hover:outline-none">
-                    UPVOTE | {FaArrowUp} 387
+                  <button
+                    onClick={() => {
+                      upvoteHandler("ChikChalupa");
+                    }}
+                    className="outline  text-white rounded-lg py-1 px-3  hover:bg-rose-400 hover:outline-none"
+                  >
+                    UPVOTE | {FaArrowUp}
+                    {ChikChalupaData?.voteCount ? ChikChalupaData.voteCount : 0}
                   </button>
                 </div>
 
@@ -232,8 +318,14 @@ const Throwdown = () => {
                 </h6>
 
                 <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-                  <button className="outline  text-white rounded-lg py-1 px-3  hover:bg-rose-400 hover:outline-none">
-                    UPVOTE | {FaArrowUp} 1021
+                  <button
+                    onClick={() => {
+                      upvoteHandler("MexPizza");
+                    }}
+                    className="outline  text-white rounded-lg py-1 px-3  hover:bg-rose-400 hover:outline-none"
+                  >
+                    UPVOTE | {FaArrowUp}
+                    {MexPizzaData?.voteCount ? MexPizzaData.voteCount : 0}
                   </button>
                 </div>
 
@@ -259,8 +351,16 @@ const Throwdown = () => {
                 </h6>
 
                 <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-                  <button className="outline  text-white rounded-lg py-1 px-3  hover:bg-rose-400 hover:outline-none">
-                    UPVOTE | {FaArrowUp} 588
+                  <button
+                    onClick={() => {
+                      upvoteHandler("DoritosLocos");
+                    }}
+                    className="outline  text-white rounded-lg py-1 px-3  hover:bg-rose-400 hover:outline-none"
+                  >
+                    UPVOTE | {FaArrowUp}
+                    {DoritosLocosData?.voteCount
+                      ? DoritosLocosData.voteCount
+                      : 0}
                   </button>
                 </div>
 
@@ -290,8 +390,14 @@ const Throwdown = () => {
                 </h6>
 
                 <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-                  <button className="outline  text-white rounded-lg py-1 px-3  hover:bg-rose-400 hover:outline-none">
-                    UPVOTE | {FaArrowUp} 522
+                  <button
+                    onClick={() => {
+                      upvoteHandler("BellGrande");
+                    }}
+                    className="outline  text-white rounded-lg py-1 px-3  hover:bg-rose-400 hover:outline-none"
+                  >
+                    UPVOTE | {FaArrowUp}
+                    {BellGrandeData?.voteCount ? BellGrandeData.voteCount : 0}
                   </button>
                 </div>
 
@@ -320,8 +426,16 @@ const Throwdown = () => {
                 </h6>
 
                 <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-                  <button className="outline  text-white rounded-lg py-1 px-3  hover:bg-rose-400 hover:outline-none">
-                    UPVOTE | {FaArrowUp} 221
+                  <button
+                    onClick={() => {
+                      upvoteHandler("ChikQuesadilla");
+                    }}
+                    className="outline  text-white rounded-lg py-1 px-3  hover:bg-rose-400 hover:outline-none"
+                  >
+                    UPVOTE | {FaArrowUp}
+                    {ChikQuesadillaData?.voteCount
+                      ? ChikQuesadillaData.voteCount
+                      : 0}
                   </button>
                 </div>
 
@@ -356,8 +470,14 @@ const Throwdown = () => {
                 </h6>
 
                 <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-                  <button className="outline  text-white rounded-lg py-1 px-3  hover:bg-rose-400 hover:outline-none">
-                    UPVOTE | {FaArrowUp} 375
+                  <button
+                    onClick={() => {
+                      upvoteHandler("SoftTaco");
+                    }}
+                    className="outline  text-white rounded-lg py-1 px-3  hover:bg-rose-400 hover:outline-none"
+                  >
+                    UPVOTE | {FaArrowUp}
+                    {SoftTacoData?.voteCount ? SoftTacoData.voteCount : 0}
                   </button>
                 </div>
 
@@ -388,8 +508,14 @@ const Throwdown = () => {
                 </h6>
 
                 <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-                  <button className="outline  text-white rounded-lg py-1 px-3  hover:bg-rose-400 hover:outline-none">
-                    UPVOTE | {FaArrowUp} 444
+                  <button
+                    onClick={() => {
+                      upvoteHandler("PotTaco");
+                    }}
+                    className="outline  text-white rounded-lg py-1 px-3  hover:bg-rose-400 hover:outline-none"
+                  >
+                    UPVOTE | {FaArrowUp}
+                    {PotTacoData?.voteCount ? PotTacoData.voteCount : 0}
                   </button>
                 </div>
 
@@ -424,8 +550,16 @@ const Throwdown = () => {
                 </h6>
 
                 <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-                  <button className="outline  text-white rounded-lg py-1 px-3  hover:bg-rose-400 hover:outline-none">
-                    UPVOTE | {FaArrowUp} 526
+                  <button
+                    onClick={() => {
+                      upvoteHandler("VegCrunchWrap");
+                    }}
+                    className="outline  text-white rounded-lg py-1 px-3  hover:bg-rose-400 hover:outline-none"
+                  >
+                    UPVOTE | {FaArrowUp}
+                    {VegCrunchWrapData?.voteCount
+                      ? VegCrunchWrapData.voteCount
+                      : 0}
                   </button>
                 </div>
 
@@ -457,8 +591,16 @@ const Throwdown = () => {
                 </h6>
 
                 <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-                  <button className="outline  text-white rounded-lg py-1 px-3  hover:bg-rose-400 hover:outline-none">
-                    UPVOTE | {FaArrowUp} 681
+                  <button
+                    onClick={() => {
+                      upvoteHandler("RanchFryBurr");
+                    }}
+                    className="outline  text-white rounded-lg py-1 px-3  hover:bg-rose-400 hover:outline-none"
+                  >
+                    UPVOTE | {FaArrowUp}
+                    {RanchFryBurrData?.voteCount
+                      ? RanchFryBurrData.voteCount
+                      : 0}
                   </button>
                 </div>
 
