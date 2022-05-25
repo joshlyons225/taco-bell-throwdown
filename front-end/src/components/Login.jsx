@@ -43,12 +43,6 @@ const Login = (props) => {
     });
   };
 
-  // bong audio function
-  function playBong() {
-    const audio = document.getElementById("audio");
-    audio.play();
-  }
-
   // render pretties
   return (
     <section
@@ -96,7 +90,6 @@ const Login = (props) => {
                       </div>
                       <div className="text-center pt-1 mb-12 pb-1">
                         <button
-                          onClick={playBong}
                           id="login-button"
                           className="form-control block px-6 border-rose-500 text-rose-500 font-normal text-xs leading-tight uppercase rounded shadow-md hover:bg-rose-500 hover:text-white hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-0 active:shadow-lg transition duration-150 ease-in-out w-full mb-3 py-2"
                           type="login-button"
