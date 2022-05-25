@@ -26,7 +26,7 @@ const CommentWall = ({ thoughts, title }) => {
             </p>
 
             {/* thought display */}
-            <div className='card-body px-3 py-2 text-xl w-10/12 outline bg-white dome'>
+            <div className='card-body px-3 py-2 text-l w-10/12 outline font-light bg-white dome'>
               <p>{thought.thoughtText}</p>
             </div>
 

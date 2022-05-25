@@ -64,7 +64,7 @@ const CommentForm = () => {
       >
         Character Count: {characterCount}/280
         {error && (
-          <span className='ml-2'>
+          <span className='ml-2 text-rose-500 '>
             Someone doesn't know what 280 characters means..
           </span>
         )}
