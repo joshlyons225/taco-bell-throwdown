@@ -37,17 +37,25 @@ const client = new ApolloClient({
   cache: new InMemoryCache(),
 });
 
+function Main() {
+  return (
+    <div>
+      <Home />
+      <Champion />
+      <Throwdown />
+      <Footer />
+    </div>
+  );
+}
+
 function App() {
   return (
     <ApolloProvider client={client}>
       <Router>
         <div className="main">
           <Navbar />
-          <Home />
-          <Champion />
-          <Throwdown />
-          <Footer />
           <Routes>
+            <Route exact path="/" element={<Main />} />
             <Route path="/login" element={<Login />} />
             <Route path="/signup" element={<Signup />} />
           </Routes>
