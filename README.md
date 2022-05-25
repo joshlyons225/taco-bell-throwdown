@@ -29,7 +29,7 @@ This application lets users create an account profile to be able to upvote on th
 [GitHub link](https://github.com/joshlyons225/taco-bell-throwdown)
 
 ## Deployed App Link
-[Heroku link](https://taco-bell-throwdown.herokuapp.com/)
+[Heroku link](https://taco-bell-throwdownn.herokuapp.com//)
 
 ## Screenshots
 ![image](https://user-images.githubusercontent.com/95149604/170357867-8630cd12-cae6-44cd-b62d-d282f132df13.png)
