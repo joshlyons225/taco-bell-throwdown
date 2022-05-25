@@ -32,15 +32,15 @@ const Champion = () => {
 
       <div className='items-center py-5 champbg h-full flex'>
         <div className='pt-auto pl-10 text-white '>
-          <p className='text-6xl w-1/2 '>BLACK BEAN CHALUPA SUPREME</p>
-          <p className='champtext pt-2 w-1/2'>
+          <p className='text-6xl w-1/2'>BLACK BEAN CHALUPA SUPREME</p>
+          <p className='champtext pt-2 w-1/2 text-base'>
             And right here, we have the winner. You know. The kind of thing that
             you keep going back to time and again, although you know it just
             might be a toxic relationship. We're okay with that, too.
           </p>
         </div>
         <div className='flex container mx-auto my-auto'>
-          <div className='tally outline text-white text-lg rounded-lg py-1 px-3 '>
+          <div className='tally outline text-white text-lg rounded-lg py-1 px-3 mr-4 w-max '>
             VOTE TOTAL COUNT | 681
           </div>
         </div>
