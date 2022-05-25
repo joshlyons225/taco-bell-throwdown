@@ -24,7 +24,9 @@ const CommentWall = ({ thoughts, title }) => {
               </Link>{' '}
               really gives a crap about {thought.createdAt}
             </p>
-            <div className='card-body px-3 py-2 text-xl outline bg-white'>
+
+            {/* thought display */}
+            <div className='card-body px-3 py-2 text-xl w-10/12 outline bg-white dome'>
               <p>{thought.thoughtText}</p>
             </div>
 
