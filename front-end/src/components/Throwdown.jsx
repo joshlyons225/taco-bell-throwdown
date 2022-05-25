@@ -9,6 +9,16 @@ import { useMutation, useQuery } from "@apollo/client";
 import { QUERY_COUNT } from "../utils/queries";
 
 const Throwdown = () => {
+  // upvoteFood function
+  const [upvoteFood, { error }] = useMutation(UPVOTE_FOOD);
+  const upvoteHandler = async (food) => {
+    const { data } = await upvoteFood({
+      variables: { food },
+    });
+    console.log(data);
+    console.log(error);
+  };
+
   // upvote individual food items counter
   const { loading: loading1, data: BBChalupaData } = useQuery(QUERY_COUNT, {
     variables: {
@@ -100,16 +110,6 @@ const Throwdown = () => {
   ) {
     return <div>Loading... like it's 2001</div>;
   }
-
-  // upvoteFood function
-  const [upvoteFood, { error }] = useMutation(UPVOTE_FOOD);
-  const upvoteHandler = async (food) => {
-    const { data } = await upvoteFood({
-      variables: { food },
-    });
-    console.log(data);
-    console.log(error);
-  };
 
   // pretty pretty styling
   return (
