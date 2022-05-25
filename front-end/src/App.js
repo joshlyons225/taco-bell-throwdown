@@ -17,10 +17,6 @@ import Signup from './components/Signup';
 import Login from './components/Login';
 import Footer from './components/Footer';
 import Profile from './components/Profile';
-import CommentForm from './components/CommentForm';
-import CommentWall from './components/CommentWall';
-import ReplyForm from './components/ReplyForm';
-import ReplyWall from './components/ReplyWall';
 
 const httpLink = createHttpLink({
   uri: '/graphql',

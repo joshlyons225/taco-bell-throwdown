@@ -32,6 +32,11 @@ const Navbar = () => {
                 THROWDOWN
               </Link>
             </li>
+            <li className='nav'>
+              <Link to='profile' smooth={true} duration={500}>
+                THUNDERDOME
+              </Link>
+            </li>
           </ul>
         </div>
 

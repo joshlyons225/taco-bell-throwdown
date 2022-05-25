@@ -74,12 +74,15 @@ const CommentForm = () => {
         onSubmit={handleFormSubmit}
       >
         <textarea
-          placeholder="Here's a new thought..."
+          placeholder=" Here's a new thought..."
           value={thoughtText}
-          className='form-input col-12 col-md-9'
+          className='form-input col-12 col-md-9 dome'
           onChange={handleChange}
         ></textarea>
-        <button className='btn col-12 col-md-3 px-3 py-2 dome' type='submit'>
+        <button
+          className='btn col-12 col-md-4 px-3 py-2 align-middle dome'
+          type='submit'
+        >
           Submit
         </button>
       </form>
