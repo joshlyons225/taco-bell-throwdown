@@ -3,7 +3,6 @@ import React, { useState } from 'react';
 import { useMutation } from '@apollo/client';
 import { ADD_USER } from '../utils/mutations';
 import Auth from '../utils/auth';
-import { Link } from 'react-scroll';
 import Logo1 from '../assets/images/campeon.png';
 
 const Signup = () => {
@@ -85,7 +84,7 @@ const Signup = () => {
             </form>
             {/* set error popup for incorrect credentials */}
             {error && (
-              <div>
+              <div py-2 px-3>
                 Login failed, Bot. Try username and/or password again. Beep,
                 boop.
               </div>
@@ -93,7 +92,9 @@ const Signup = () => {
           </div>
 
           <div className='text-grey-dark mt-6'>
-            <a href='/login'>Already Have An Account? Log in.</a>
+            <a href='/login' className='signup'>
+              Already Have An Account? Log In.
+            </a>
           </div>
         </div>
       </div>

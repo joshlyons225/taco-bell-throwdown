@@ -1,23 +1,23 @@
-import React from "react";
-import { Carousel } from "react-responsive-carousel";
-import "react-responsive-carousel/lib/styles/carousel.min.css";
-import imgPack from "../assets/images/index";
-import throwdownLogo from "../assets/images/throwdown-logo.png";
-import { FaArrowUp } from "react-icons/fa";
-import { UPVOTE_FOOD } from "../utils/mutations";
-import { useMutation, useQuery } from "@apollo/client";
-import { QUERY_COUNT } from "../utils/queries";
+import React from 'react';
+import { Carousel } from 'react-responsive-carousel';
+import 'react-responsive-carousel/lib/styles/carousel.min.css';
+import imgPack from '../assets/images/index';
+import throwdownLogo from '../assets/images/throwdown-logo.png';
+import { FaArrowUp } from 'react-icons/fa';
+import { UPVOTE_FOOD } from '../utils/mutations';
+import { useMutation, useQuery } from '@apollo/client';
+import { QUERY_COUNT } from '../utils/queries';
 
 const Throwdown = () => {
   // upvote individual food items counter
   const { loading: loading1, data: BBChalupaData } = useQuery(QUERY_COUNT, {
     variables: {
-      food: "BBChalupa",
+      food: 'BBChalupa',
     },
   });
   const { loading: loading2, data: BBQuesaritoData } = useQuery(QUERY_COUNT, {
     variables: {
-      food: "BBQuesarito",
+      food: 'BBQuesarito',
     },
   });
   const { loading: loading3, data: CBRBurritoData } = useQuery(QUERY_COUNT, {
@@ -93,19 +93,19 @@ const Throwdown = () => {
 
   // pretty pretty styling
   return (
-    <section name="throwdown" className="w-full h-auto bg-black">
+    <section name='throwdown' className='w-full h-auto bg-black'>
       <img
         src={throwdownLogo}
-        alt="taco bell throwdown contenders"
-        className="mx-auto w-1/2 py-3"
+        alt='taco bell throwdown contenders'
+        className='mx-auto w-1/2 py-3'
       ></img>
       {/* Carousel */}
-      <div className="carousel-wrapper pb-10">
+      <div className='carousel-wrapper pb-10'>
         <Carousel
           infiniteLoop
           useKeyboardArrows
           autoPlay
-          interval={999000}
+          interval={5000}
           centerMode={true}
           onSwipeMove={true}
           showThumbs={false}
@@ -115,29 +115,29 @@ const Throwdown = () => {
         >
           <div>
             <div>
-              <div className="relative">
+              <div className='relative'>
                 <img
-                  className="object-cover w-auto py-2 h-1/5 relative brightness-50"
-                  src={imgPack["smImgPack"]["BBChalupa"]}
-                  alt="bbchalupa icon"
+                  className='object-cover w-auto py-2 h-1/5 relative brightness-50'
+                  src={imgPack['smImgPack']['BBChalupa']}
+                  alt='bbchalupa icon'
                 ></img>
-                <h6 className="text-7xl absolute top-20 mx-auto nav text-center">
+                <h6 className='text-7xl absolute top-20 mx-auto nav text-center'>
                   BLACK BEAN CHALUPA SUPREME
                 </h6>
 
-                <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+                <div className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2'>
                   <button
                     onClick={() => {
-                      upvoteHandler("BBChalupa");
+                      upvoteHandler('BBChalupa');
                     }}
-                    className="outline  text-white rounded-lg py-1 px-3  hover:bg-rose-400 hover:outline-none"
+                    className='outline  text-white rounded-lg py-1 px-3  hover:bg-rose-400 hover:outline-none'
                   >
                     UPVOTE | {FaArrowUp}
                     {BBChalupaData?.voteCount ? BBChalupaData.voteCount : 0}
                   </button>
                 </div>
 
-                <p className="text-white text-lg pb-12 pt-3 absolute bottom-10 inset-x-1 caroutext">
+                <p className='text-white text-lg pb-12 pt-3 absolute bottom-10 inset-x-1 caroutext'>
                   If there’s anything more carefree than the classic Chalupa, we
                   aren’t familiar with it. Some say that they invented the term
                   “chill”. Heck, you can’t even say ‘Chalupa’ without a little
@@ -153,29 +153,29 @@ const Throwdown = () => {
 
           <div>
             <div>
-              <div className="relative">
+              <div className='relative'>
                 <img
-                  className="object-cover w-auto py-2 h-1/5 relative brightness-50"
-                  src={imgPack["smImgPack"]["BBQuesarito"]}
-                  alt="bbquesarito icon"
+                  className='object-cover w-auto py-2 h-1/5 relative brightness-50'
+                  src={imgPack['smImgPack']['BBQuesarito']}
+                  alt='bbquesarito icon'
                 ></img>
-                <h6 className="text-7xl absolute top-20 mx-auto nav pl-50">
+                <h6 className='text-7xl absolute top-20 mx-auto nav pl-50'>
                   BLACK BEAN QUESARITO
                 </h6>
 
-                <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+                <div className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2'>
                   <button
                     onClick={() => {
-                      upvoteHandler("BBQuesarito");
+                      upvoteHandler('BBQuesarito');
                     }}
-                    className="outline  text-white rounded-lg py-1 px-3  hover:bg-rose-400 hover:outline-none"
+                    className='outline  text-white rounded-lg py-1 px-3  hover:bg-rose-400 hover:outline-none'
                   >
                     UPVOTE | {FaArrowUp}
                     {BBQuesaritoData?.voteCount ? BBQuesaritoData.voteCount : 0}
                   </button>
                 </div>
 
-                <p className="text-white text-lg pb-12 pt-3 absolute bottom-10 inset-x-1 caroutext">
+                <p className='text-white text-lg pb-12 pt-3 absolute bottom-10 inset-x-1 caroutext'>
                   A little while ago, in the not-so-distant past, someone in our
                   kitchen had an epiphany: we should take a quesadilla, roll it
                   up like a burrito, and fill it with delicious ingredients. And
@@ -191,17 +191,16 @@ const Throwdown = () => {
 
           <div>
             <div>
-              <div className="relative">
+              <div className='relative'>
                 <img
-                  className="object-cover w-auto py-2 h-1/5 relative brightness-50"
-                  src={imgPack["smImgPack"]["CBRBurrito"]}
-                  alt="cbrburrito icon"
+                  className='object-cover w-auto py-2 h-1/5 relative brightness-50'
+                  src={imgPack['smImgPack']['CBRBurrito']}
+                  alt='cbrburrito icon'
                 ></img>
 
-                <h6 className="text-7xl absolute top-20 mx-auto nav pl-50">
+                <h6 className='text-7xl absolute top-20 mx-auto nav pl-50'>
                   CHEESY BEAN & RICE BURRITO
                 </h6>
-
                 <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
                   <button
                     onClick={() => {
@@ -214,7 +213,7 @@ const Throwdown = () => {
                   </button>
                 </div>
 
-                <p className="text-white text-lg pb-12 pt-3 absolute bottom-10 inset-x-1 caroutext">
+                <p className='text-white text-lg pb-12 pt-3 absolute bottom-10 inset-x-1 caroutext'>
                   So there’s cheesy, and then there’s cheesy. How do you
                   differentiate the two? Because both clearly have totally
                   different meanings. For starters, you can be cheesy by telling
@@ -233,16 +232,15 @@ const Throwdown = () => {
 
           <div>
             <div>
-              <div className="relative">
+              <div className='relative'>
                 <img
-                  className="object-cover w-auto py-2 h-1/5 relative brightness-50"
-                  src={imgPack["smImgPack"]["GorditaCrunch"]}
-                  alt="gorditacrunch icon"
+                  className='object-cover w-auto py-2 h-1/5 relative brightness-50'
+                  src={imgPack['smImgPack']['GorditaCrunch']}
+                  alt='gorditacrunch icon'
                 ></img>
-                <h6 className="text-7xl absolute top-20 mx-auto nav pl-50">
+                <h6 className='text-7xl absolute top-20 mx-auto nav pl-50'>
                   CHEESY GORDITA CRUNCH
                 </h6>
-
                 <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
                   <button
                     onClick={() => {
@@ -254,10 +252,11 @@ const Throwdown = () => {
                     {GorditaCrunchData?.voteCount
                       ? GorditaCrunchData.voteCount
                       : 0}
+
                   </button>
                 </div>
 
-                <p className="text-white text-lg pb-12 pt-3 absolute bottom-10 inset-x-1 caroutext">
+                <p className='text-white text-lg pb-12 pt-3 absolute bottom-10 inset-x-1 caroutext'>
                   A warm flatbread layered with three-cheese blend and wrapped
                   around a crunchy taco filled with seasoned beef, spicy ranch
                   sauce, crispy lettuce and shredded cheddar cheese.
@@ -268,13 +267,13 @@ const Throwdown = () => {
 
           <div>
             <div>
-              <div className="relative">
+              <div className='relative'>
                 <img
-                  className="object-cover w-auto py-2 h-1/5 relative brightness-50"
-                  src={imgPack["smImgPack"]["ChikChalupa"]}
-                  alt="chikchalupa icon"
+                  className='object-cover w-auto py-2 h-1/5 relative brightness-50'
+                  src={imgPack['smImgPack']['ChikChalupa']}
+                  alt='chikchalupa icon'
                 ></img>
-                <h6 className="text-7xl absolute top-20 mx-auto nav pl-50">
+                <h6 className='text-7xl absolute top-20 mx-auto nav pl-50'>
                   CHICKEN CHALUPA SUPREME
                 </h6>
 
@@ -290,7 +289,7 @@ const Throwdown = () => {
                   </button>
                 </div>
 
-                <p className="text-white text-lg pb-12 pt-3 absolute bottom-10 inset-x-1 caroutext">
+                <p className='text-white text-lg pb-12 pt-3 absolute bottom-10 inset-x-1 caroutext'>
                   The Chalupa Supreme sure weaves some beautiful witchcraft.
                   Take a traditional flatbread, something already awesome in its
                   own right, and fry it. Suddenly you have a shell that
@@ -307,13 +306,13 @@ const Throwdown = () => {
 
           <div>
             <div>
-              <div className="relative">
+              <div className='relative'>
                 <img
-                  className="object-cover w-auto py-2 h-1/5 relative brightness-50"
-                  src={imgPack["smImgPack"]["MexPizza"]}
-                  alt="mexpizza icon"
+                  className='object-cover w-auto py-2 h-1/5 relative brightness-50'
+                  src={imgPack['smImgPack']['MexPizza']}
+                  alt='mexpizza icon'
                 ></img>
-                <h6 className="text-7xl absolute top-20 mx-auto nav pl-50">
+                <h6 className='text-7xl absolute top-20 mx-auto nav pl-50'>
                   MEXICAN PIZZA
                 </h6>
 
@@ -329,7 +328,7 @@ const Throwdown = () => {
                   </button>
                 </div>
 
-                <p className="text-white text-lg pb-12 pt-3 absolute bottom-10 inset-x-1 caroutext">
+                <p className='text-white text-lg pb-12 pt-3 absolute bottom-10 inset-x-1 caroutext'>
                   Seasoned beef and refried beans between two Mexican Pizza
                   shells with Mexican Pizza sauce, three-cheese blend, and
                   tomatoes on top.
@@ -340,16 +339,15 @@ const Throwdown = () => {
 
           <div>
             <div>
-              <div className="relative">
+              <div className='relative'>
                 <img
-                  className="object-cover w-auto py-2 h-1/5 relative brightness-50"
-                  src={imgPack["smImgPack"]["DoritosLocos"]}
-                  alt="doritoslocos icon"
+                  className='object-cover w-auto py-2 h-1/5 relative brightness-50'
+                  src={imgPack['smImgPack']['DoritosLocos']}
+                  alt='doritoslocos icon'
                 ></img>
-                <h6 className="text-7xl absolute top-20 mx-auto nav pl-50">
+                <h6 className='text-7xl absolute top-20 mx-auto nav pl-50'>
                   DORITOS LOCOS TACO SUPREME
                 </h6>
-
                 <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
                   <button
                     onClick={() => {
@@ -361,10 +359,11 @@ const Throwdown = () => {
                     {DoritosLocosData?.voteCount
                       ? DoritosLocosData.voteCount
                       : 0}
+
                   </button>
                 </div>
 
-                <p className="text-white text-lg pb-12 pt-3 absolute bottom-10 inset-x-1 caroutext">
+                <p className='text-white text-lg pb-12 pt-3 absolute bottom-10 inset-x-1 caroutext'>
                   As you already know, the Nacho Cheese Doritos® Locos Tacos
                   Supreme® all started with a dream. But with every dream,
                   there’s always that starting point. You know, the leap off.
@@ -379,13 +378,13 @@ const Throwdown = () => {
 
           <div>
             <div>
-              <div className="relative">
+              <div className='relative'>
                 <img
-                  className="object-cover w-auto py-2 h-1/5 relative brightness-50"
-                  src={imgPack["smImgPack"]["BellGrande"]}
-                  alt="bellgrande icon"
+                  className='object-cover w-auto py-2 h-1/5 relative brightness-50'
+                  src={imgPack['smImgPack']['BellGrande']}
+                  alt='bellgrande icon'
                 ></img>
-                <h6 className="text-7xl absolute top-20 mx-auto nav pl-50">
+                <h6 className='text-7xl absolute top-20 mx-auto nav pl-50'>
                   NACHOS BELLGRANDE
                 </h6>
 
@@ -401,7 +400,7 @@ const Throwdown = () => {
                   </button>
                 </div>
 
-                <p className="text-white text-lg pb-12 pt-3 absolute bottom-10 inset-x-1 caroutext">
+                <p className='text-white text-lg pb-12 pt-3 absolute bottom-10 inset-x-1 caroutext'>
                   Welcome to the Nachos Draft: the daily lunch event that you've
                   prepped for all off-season...aka since your last Taco Bell
                   run. The #1 overall pick is an easy choice: the Nachos
@@ -415,16 +414,15 @@ const Throwdown = () => {
 
           <div>
             <div>
-              <div className="relative">
+              <div className='relative'>
                 <img
-                  className="object-cover w-auto py-2 h-1/5 relative brightness-50"
-                  src={imgPack["smImgPack"]["ChikQuesadilla"]}
-                  alt="chikquesadilla icon"
+                  className='object-cover w-auto py-2 h-1/5 relative brightness-50'
+                  src={imgPack['smImgPack']['ChikQuesadilla']}
+                  alt='chikquesadilla icon'
                 ></img>
-                <h6 className="text-7xl absolute top-20 mx-auto nav pl-50">
+                <h6 className='text-7xl absolute top-20 mx-auto nav pl-50'>
                   CHICKEN QUESADILLA
                 </h6>
-
                 <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
                   <button
                     onClick={() => {
@@ -439,7 +437,7 @@ const Throwdown = () => {
                   </button>
                 </div>
 
-                <p className="text-white text-lg pb-12 pt-3 absolute bottom-10 inset-x-1 caroutext">
+                <p className='text-white text-lg pb-12 pt-3 absolute bottom-10 inset-x-1 caroutext'>
                   The Chicken Quesadilla is a purist’s meal; and we say “purist”
                   in the most complimenting way possible. It’s a simple flour
                   tortilla with some grilled chicken, a hefty portion of melted
@@ -459,16 +457,15 @@ const Throwdown = () => {
 
           <div>
             <div>
-              <div className="relative">
+              <div className='relative'>
                 <img
-                  className="object-cover w-auto py-2 h-1/5 relative brightness-50"
-                  src={imgPack["smImgPack"]["SoftTaco"]}
-                  alt="softtaco icon"
+                  className='object-cover w-auto py-2 h-1/5 relative brightness-50'
+                  src={imgPack['smImgPack']['SoftTaco']}
+                  alt='softtaco icon'
                 ></img>
-                <h6 className="text-7xl absolute top-20 mx-auto nav pl-50">
+                <h6 className='text-7xl absolute top-20 mx-auto nav pl-50'>
                   CLASSIC BEEF SOFT TACO
                 </h6>
-
                 <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
                   <button
                     onClick={() => {
@@ -481,7 +478,7 @@ const Throwdown = () => {
                   </button>
                 </div>
 
-                <p className="text-white text-lg pb-12 pt-3 absolute bottom-10 inset-x-1 caroutext">
+                <p className='text-white text-lg pb-12 pt-3 absolute bottom-10 inset-x-1 caroutext'>
                   While the Crunchy Taco’s got a tough outer shell, a bit of a
                   mean streak, and a penchant for picking fights with strangers,
                   the Soft Taco has a nice polite chill. Instead of a tough corn
@@ -497,13 +494,13 @@ const Throwdown = () => {
 
           <div>
             <div>
-              <div className="relative">
+              <div className='relative'>
                 <img
-                  className="object-cover w-auto py-2 h-1/5 relative brightness-50"
-                  src={imgPack["smImgPack"]["PotTaco"]}
-                  alt="pottaco icon"
+                  className='object-cover w-auto py-2 h-1/5 relative brightness-50'
+                  src={imgPack['smImgPack']['PotTaco']}
+                  alt='pottaco icon'
                 ></img>
-                <h6 className="text-7xl absolute top-20 mx-auto nav pl-50">
+                <h6 className='text-7xl absolute top-20 mx-auto nav pl-50'>
                   SPICY POTATO SOFT TACO
                 </h6>
 
@@ -519,7 +516,7 @@ const Throwdown = () => {
                   </button>
                 </div>
 
-                <p className="text-white text-lg pb-12 pt-3 absolute bottom-10 inset-x-1 caroutext">
+                <p className='text-white text-lg pb-12 pt-3 absolute bottom-10 inset-x-1 caroutext'>
                   Who even thought of the game hot potato? Seriously, though.
                   It’s basically a game of catch but with a hot potato. If you
                   think about it, you basically heat a potato hotter than you
@@ -539,16 +536,15 @@ const Throwdown = () => {
 
           <div>
             <div>
-              <div className="relative">
+              <div className='relative'>
                 <img
-                  className="object-cover w-auto py-2 h-1/5 relative brightness-50"
-                  src={imgPack["smImgPack"]["VegCrunchWrap"]}
-                  alt="vegcrunchwrap icon"
+                  className='object-cover w-auto py-2 h-1/5 relative brightness-50'
+                  src={imgPack['smImgPack']['VegCrunchWrap']}
+                  alt='vegcrunchwrap icon'
                 ></img>
-                <h6 className="text-7xl absolute top-20 mx-auto nav pl-50">
+                <h6 className='text-7xl absolute top-20 mx-auto nav pl-50'>
                   BLACK BEAN CRUNCHWRAP
                 </h6>
-
                 <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
                   <button
                     onClick={() => {
@@ -563,7 +559,7 @@ const Throwdown = () => {
                   </button>
                 </div>
 
-                <p className="text-white text-lg pb-12 pt-3 absolute bottom-10 inset-x-1 caroutext">
+                <p className='text-white text-lg pb-12 pt-3 absolute bottom-10 inset-x-1 caroutext'>
                   The Black Bean Crunchwrap is the vegetarian version of one of
                   our greatest creations. So what’s in one, exactly? We couldn’t
                   be happier that you asked. It starts off with our signature
@@ -580,16 +576,15 @@ const Throwdown = () => {
 
           <div>
             <div>
-              <div className="relative">
+              <div className='relative'>
                 <img
-                  className="object-cover w-auto py-2 h-1/5 relative brightness-50"
-                  src={imgPack["smImgPack"]["RanchFryBurr"]}
-                  alt="ranchfryburr icon"
+                  className='object-cover w-auto py-2 h-1/5 relative brightness-50'
+                  src={imgPack['smImgPack']['RanchFryBurr']}
+                  alt='ranchfryburr icon'
                 ></img>
-                <h6 className="text-7xl absolute top-20 mx-auto nav pl-50">
+                <h6 className='text-7xl absolute top-20 mx-auto nav pl-50'>
                   WHITE HOT RANCH FRIES BURRITO
                 </h6>
-
                 <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
                   <button
                     onClick={() => {
@@ -604,7 +599,7 @@ const Throwdown = () => {
                   </button>
                 </div>
 
-                <p className="text-white text-lg pb-12 pt-3 absolute bottom-10 inset-x-1 caroutext">
+                <p className='text-white text-lg pb-12 pt-3 absolute bottom-10 inset-x-1 caroutext'>
                   Seasoned Nacho Fries topped with black beans, spicy white hot
                   ranch sauce, nacho cheese sauce, tomatoes, reduced-fat sour
                   cream, and real shredded cheddar cheese wrapped inside a warm
