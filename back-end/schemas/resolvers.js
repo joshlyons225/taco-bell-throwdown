@@ -37,6 +37,10 @@ const resolvers = {
     thought: async (parent, { _id }) => {
       return Thought.findOne({ _id });
     },
+    voteCount: async (parent, { food }) => {
+      const results = await User.find({ upvote: food });
+      return results.length;
+    },
   },
 
   // Mutation function list
@@ -65,6 +69,22 @@ const resolvers = {
 
       const token = signToken(user);
       return { token, user };
+    },
+
+    // Upvote function controllers
+    upvote: async (parent, args, context) => {
+      if (context.user) {
+        const updatedUser = await User.findByIdAndUpdate(
+          { _id: context.user._id },
+          { upvote: args.food },
+          { new: true }
+        );
+        return updatedUser;
+      }
+
+      throw new AuthenticationError(
+        "No one cares about your words unless you are logged in."
+      );
     },
 
     // Thought function controllers

@@ -9,7 +9,7 @@ import Logo from "../assets/images/tall-head.png";
 
 const Login = (props) => {
   // create functionality
-  const [formState, setFormState] = useState({ username: "", password: "" });
+  const [formState, setFormState] = useState({ email: "", password: "" });
   const [login, { error }] = useMutation(LOGIN_USER);
 
   // adapt to user inputs on form
@@ -39,7 +39,7 @@ const Login = (props) => {
 
     // clear form inputs
     setFormState({
-      username: "",
+      email: "",
       password: "",
     });
   };
@@ -71,10 +71,10 @@ const Login = (props) => {
                         <input
                           type="text"
                           className="form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
-                          name="username"
-                          id="username-login"
-                          placeholder="Username"
-                          value={formState.username}
+                          name="email"
+                          id="email-login"
+                          placeholder="Email"
+                          value={formState.email}
                           onChange={handleChange}
                         />
                       </div>
@@ -106,7 +106,7 @@ const Login = (props) => {
                       {/* set error popup for incorrect credentials */}
                       {error && (
                         <div>
-                          Login failed, Bot. Try username and/or password again.
+                          Login failed, Bot. Try email and/or password again.
                           Beep, boop.
                         </div>
                       )}

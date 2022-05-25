@@ -100,3 +100,9 @@ export const QUERY_ME_BASIC = gql`
     }
   }
 `;
+
+export const QUERY_COUNT = gql`
+  query upvoteCount($food: String!) {
+    voteCount(food: $food)
+  }
+`;

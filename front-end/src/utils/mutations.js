@@ -70,6 +70,16 @@ export const ADD_FRIEND = gql`
   }
 `;
 
+export const UPVOTE_FOOD = gql`
+  mutation upvote($food: String!) {
+    upvote(food: $food) {
+      _id
+      username
+      upvote
+    }
+  }
+`;
+
 export const REMOVE_FRIEND = gql`
   mutation removeFriend($id: ID!) {
     removeFriend(id: $id) {
