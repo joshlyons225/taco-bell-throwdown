@@ -114,16 +114,13 @@ const Login = (props) => {
                         <p className='mb-0 mr-2 text-gray-500'>
                           Need An Account?
                         </p>
-                        <Link to='/signup' smooth={true} duration={500}>
-                          <button
+                        <a href='/signup'>SIGN UP</a>
+                        {/* <button
                             type='button'
                             className='inline-block px-6 py-2 border-2 border-rose-500 text-rose-500 font-medium text-xs leading-tight uppercase rounded hover:bg-rose-500  hover:text-white focus:outline-none focus:ring-0 transition duration-150 ease-in-out'
                             data-mdb-ripple='true'
                             data-mdb-ripple-color='light'
-                          >
-                            Sign Up
-                          </button>
-                        </Link>
+                          > */}
                       </div>
                     </form>
                   </div>
