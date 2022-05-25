@@ -32,6 +32,11 @@ const Navbar = () => {
                 THROWDOWN
               </Link>
             </li>
+            <li className='nav'>
+              <Link to='profile' smooth={true} duration={500}>
+                THUNDERDOME
+              </Link>
+            </li>
           </ul>
         </div>
 
@@ -91,15 +96,15 @@ const Navbar = () => {
               THROWDOWN
             </Link>
           </li>
-          <li className='py-2 text-xl nav2 text-center'>
+          <li className='py-2 text-xl text-center nav2'>
             {' '}
             <Link
               onClick={clickHandler}
-              to='login'
+              to='profile'
               smooth={true}
               duration={500}
             >
-              LOG IN
+              THUNDERDOME
             </Link>
           </li>
         </ul>

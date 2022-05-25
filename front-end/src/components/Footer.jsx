@@ -4,7 +4,7 @@ import { FaToilet, FaToiletPaper } from 'react-icons/fa';
 const Footer = () => {
   return (
     <footer className='w-full h-auto display-block text-center bg-black'>
-      <h3 className='text-white text-center inline-flex py-2 mx-3 whitespace-pre-wrap'>
+      <h3 className='text-white text-center inline-flex py-2 mx-3 mt-4 whitespace-pre-wrap text-lg'>
         <FaToilet size={30} color='white' />
         &nbsp;
         <a href='https://github.com/joshlyons225/'>Josh Lyons</a> •{' '}

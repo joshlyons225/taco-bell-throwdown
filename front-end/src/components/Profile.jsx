@@ -48,33 +48,33 @@ const Profile = (props) => {
     }
   };
 
-  console.log(user.username);
-
   // pretty pretty styling
   return (
-    <div>
-      <div className='flex-row mb-3'>
-        <h2 className='bg-dark text-secondary p-3 display-inline-block text-6xl'>
-          Welcome to {userParam ? `${user.username}'s` : 'your'} Thunderdome.
-        </h2>
+    <section name='profile'>
+      <div>
+        <div className='flex-row mb-3'>
+          <h2 className='bg-dark text-secondary p-3 display-inline-block text-6xl'>
+            Welcome to {userParam ? `${user.username}'s` : 'your'} Thunderdome.
+          </h2>
 
-        {userParam && (
-          <button className='btn ml-auto' onClick={handleClick}>
-            Playdate!
-          </button>
-        )}
-      </div>
-
-      <div className='flex-row justify-space-between mb-3'>
-        <div className='col-12 mb-3 pl-3 col-lg-8'>
-          <CommentWall
-            thoughts={user.thoughts}
-            title={`${user.username}'s thoughts...`}
-          />
+          {userParam && (
+            <button className='btn ml-auto' onClick={handleClick}>
+              Playdate!
+            </button>
+          )}
         </div>
+
+        <div className='flex-row justify-space-between mb-3'>
+          <div className='col-12 mb-3 pl-3 col-lg-8'>
+            <CommentWall
+              thoughts={user.thoughts}
+              title={`${user.username}'s thoughts...`}
+            />
+          </div>
+        </div>
+        <div className='mb-3'>{!userParam && <CommentForm />}</div>
       </div>
-      <div className='mb-3'>{!userParam && <CommentForm />}</div>
-    </div>
+    </section>
   );
 };
 
