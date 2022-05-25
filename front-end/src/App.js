@@ -50,8 +50,6 @@ function Main() {
       <Champion />
       <Throwdown />
       <Profile />
-      {/* <CommentWall /> */}
-      {/* <CommentForm /> */}
       {/* <ReplyWall /> */}
       {/* <ReplyForm /> */}
       <Footer />

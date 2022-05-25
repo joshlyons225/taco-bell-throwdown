@@ -175,3 +175,13 @@ h6.nav {
   right: 0;
   margin: 0 auto;
 }
+
+button.dome {
+  border: 2px solid #ea5b5d;
+  border-radius: 10px;
+}
+
+button.dome:hover {
+  background-color: #ea5b5d;
+  color: white;
+}
