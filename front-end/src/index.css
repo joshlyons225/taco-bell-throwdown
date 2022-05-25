@@ -192,5 +192,10 @@ button.dome:hover {
 
 textarea.dome {
   width: 33%;
+}
 
+@media only screen and (max-width: 768px) { 
+  div.dome {
+  width: 100%;
+  }
 }
