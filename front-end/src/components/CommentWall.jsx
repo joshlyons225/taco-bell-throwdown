@@ -1,8 +1,8 @@
 // import dependencies
-import React from "react";
-import { useQuery } from "@apollo/client";
-import { Link, useParams } from "react-router-dom";
-import { QUERY_USER, QUERY_ME } from "../utils/queries";
+import React from 'react';
+import { useQuery } from '@apollo/client';
+import { Link, useParams } from 'react-router-dom';
+import { QUERY_USER, QUERY_ME } from '../utils/queries';
 
 const CommentWall = ({ thoughts, title }) => {
   // pull in params to temperate literal username
@@ -27,22 +27,20 @@ const CommentWall = ({ thoughts, title }) => {
       <h3>{title}</h3>
       {thoughts &&
         thoughts.map((thought) => (
-          <div key={thought._id} className="card mb-3 ">
-            <p className="card-header pl-3">
+          <div key={thought._id} className='card mb-5 '>
+            <p className='card-header'>
               <Link
                 to={`/profile/${thought.username}`}
                 style={{ fontWeight: 700 }}
-                className="text-light"
+                className='text-light'
               >
                 {thought.username}
               </Link>
-              {`${user.username}`} really gives a crap on {thought.createdAt}{" "}
-              about:
+              {`${user.username}`}, on {thought.createdAt}, was mulling over:
             </p>
 
             {/* thought display */}
 
-            <div className="card-body px-3 py-2 text-l w-10/12 outline font-light bg-white dome">
               <p>{thought.thoughtText}</p>
             </div>
           </div>
