@@ -109,6 +109,27 @@ const resolvers = {
       );
     },
 
+    deleteThought: async (parent, args, context) => {
+      if (context.user) {
+        const thought = await Thought.findOneAndDelete({
+          ...args,
+          username: context.user.username,
+        });
+
+        await User.findByIdAndUpdate(
+          { _id: context.user._id },
+          { $push: { thoughts: thought._id } },
+          { new: true }
+        );
+
+        return thought;
+      }
+
+      throw new AuthenticationError(
+        "No one cares about your words unless you are logged in."
+      );
+    },
+
     // Reply function controllers
     addReply: async (parent, { thoughtId, replyBody }, context) => {
       if (context.user) {
