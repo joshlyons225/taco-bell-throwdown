@@ -3,7 +3,6 @@ import React, { useState } from 'react';
 import { useMutation } from '@apollo/client';
 import { LOGIN_USER } from '../utils/mutations';
 import Auth from '../utils/auth';
-import { Link } from 'react-scroll';
 import Logo1 from '../assets/images/campeon.png';
 import Logo from '../assets/images/tall-head.png';
 
@@ -105,7 +104,7 @@ const Login = (props) => {
                       </div>
                       {/* set error popup for incorrect credentials */}
                       {error && (
-                        <div>
+                        <div py-2 px-3>
                           Login failed, Bot. Try email and/or password again.
                           Beep, boop.
                         </div>
@@ -114,13 +113,12 @@ const Login = (props) => {
                         <p className='mb-0 mr-2 text-gray-500'>
                           Need An Account?
                         </p>
-                        <a href='/signup'>SIGN UP</a>
-                        {/* <button
-                            type='button'
-                            className='inline-block px-6 py-2 border-2 border-rose-500 text-rose-500 font-medium text-xs leading-tight uppercase rounded hover:bg-rose-500  hover:text-white focus:outline-none focus:ring-0 transition duration-150 ease-in-out'
-                            data-mdb-ripple='true'
-                            data-mdb-ripple-color='light'
-                          > */}
+                        <a
+                          href='/signup'
+                          className='inline-block px-6 py-2 border-2 border-rose-500 text-rose-500 font-medium text-xs leading-tight uppercase rounded hover:bg-rose-500  hover:text-white focus:outline-none focus:ring-0 transition duration-150 ease-in-out'
+                        >
+                          SIGN UP
+                        </a>
                       </div>
                     </form>
                   </div>
