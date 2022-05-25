@@ -27,8 +27,10 @@ https://github.com/joshlyons225/taco-bell-throwdown
 Heroku 
 
 ## Screenshots
-![image](https://user-images.githubusercontent.com/95149604/169719571-becc1bcc-b7a7-434e-90c8-e67a2b142cde.png)
-![image](https://user-images.githubusercontent.com/95149604/169719599-f0dae5a0-8897-44ac-ab5e-ef5dd6057acf.png)
+![Screen Shot 2022-05-24 at 7 51 58 PM](https://user-images.githubusercontent.com/93275108/170156687-90726b3e-1c2d-473d-ab37-29c042d9f76c.png)
+![Screen Shot 2022-05-24 at 7 52 14 PM](https://user-images.githubusercontent.com/93275108/170156692-c41d6edd-4d2c-41fb-b6a6-6a0de50ada36.png)
+![Screen Shot 2022-05-24 at 8 06 25 PM](https://user-images.githubusercontent.com/93275108/170157035-487a24c0-a593-4587-aade-c18bb147e891.png)
+![Screen Shot 2022-05-24 at 8 06 37 PM](https://user-images.githubusercontent.com/93275108/170157054-7f228783-b374-4918-8f06-68fa7750e993.png)
 
 ## Installation
 1) Clone the repo  
