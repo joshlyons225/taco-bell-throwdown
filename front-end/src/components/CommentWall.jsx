@@ -5,6 +5,7 @@ import { Link, useParams } from 'react-router-dom';
 import { QUERY_USER, QUERY_ME } from '../utils/queries';
 
 const CommentWall = ({ thoughts, title }) => {
+  // pull in params to temperate literal username
   const { username: userParam } = useParams();
   const { loading, data } = useQuery(userParam ? QUERY_USER : QUERY_ME, {
     variables: { username: userParam },
@@ -40,7 +41,6 @@ const CommentWall = ({ thoughts, title }) => {
 
             {/* thought display */}
 
-            <div className='card-body px-3 py-2 text-l w-10/12 outline font-light bg-white dome'>
               <p>{thought.thoughtText}</p>
             </div>
           </div>
