@@ -35,7 +35,7 @@ app.get("/", (req, res) => {
 
 // connect db with mongoose and env
 mongoose.connect(
-  process.env.MONGODB_URI || "mongodb://localhost/taco-bell-throwdown",
+  process.env.MONGODB_URI || "mongodb://localhost/taco-bell-throwdownn",
   {
     useNewUrlParser: true,
     useUnifiedTopology: true,
