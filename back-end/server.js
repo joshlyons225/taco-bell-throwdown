@@ -35,7 +35,8 @@ app.get("/", (req, res) => {
 
 // connect db with mongoose and env
 mongoose.connect(
-  "mongodb+srv://joshlyons225:passWORD@cluster0.ce9m1.mongodb.net/taco-bell-throwdownn?retryWrites=true&w=majority",
+  process.env.MONGODB_URI ||
+    "mongodb+srv://joshlyons225:passWORD@cluster0.ce9m1.mongodb.net/taco-bell-throwdownn?retryWrites=true&w=majority",
   {
     useNewUrlParser: true,
     useUnifiedTopology: true,
