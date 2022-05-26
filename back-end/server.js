@@ -29,18 +29,16 @@ app.use(express.json());
 if (process.env.NODE_ENV === "production") {
   app.use(express.static(path.join(__dirname, "../front-end/build")));
 }
-app.get("/", (req, res) => {
-  res.sendFile(path.join(__dirname, "../front-end/build/index.html"));
+app.get("*", (req, res) => {
+  res.sendFile(path.resolve(__dirname, "../front-end/build", "index.html"));
 });
 
 // connect db with mongoose and env
 mongoose.connect(
-  process.env.MONGODB_URI || "mongodb://localhost/taco-bell-throwdown",
+  process.env.MONGODB_URI || "mongodb://localhost/taco-bell-throwdownn",
   {
     useNewUrlParser: true,
     useUnifiedTopology: true,
-    useCreateIndex: true,
-    useFindAndModify: false,
   }
 );
 
