@@ -30,12 +30,12 @@ if (process.env.NODE_ENV === "production") {
   app.use(express.static(path.join(__dirname, "../front-end/build")));
 }
 app.get("/", (req, res) => {
-  res.sendFile(path.join(__dirname, "../front-end/build/index.html"));
+  res.sendFile(path.join(__dirname, "../front-end/build", "index.html"));
 });
 
 // connect db with mongoose and env
 mongoose.connect(
-  process.env.MONGODB_URI || "mongodb://localhost/taco-bell-throwdownn",
+  "mongodb+srv://joshlyons225:passWORD@cluster0.ce9m1.mongodb.net/taco-bell-throwdownn?retryWrites=true&w=majority",
   {
     useNewUrlParser: true,
     useUnifiedTopology: true,
